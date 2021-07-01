@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("./1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color: rgb(226, 198, 198);
+    align-items: center;
+    justify-content: center;
+    height: 120vh;
+    font-family: 'Lato', sans-serif;
+    margin: 0 0 0 0;
+    padding: 10px 20px;
+}
+
+.movie-container {
+    margin: 20px 0;
+}
+
+.movie-container select {
+    background-color: rgb(245, 205, 205);
+    border: 0;
+    border-radius: 5px 2px;
+    font-size: 18px;
+    margin-left: 10px;
+    padding: 5px 15px 5px 15px;
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+}
+
+.seat {
+    background-color: #285a88;
+    height: 15px;
+    width: 15px;
+    margin: 5px;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+}
+
+.seat.selected {
+    background-color: #ffffff;
+}
+
+.seat.occupied {
+    background-color: rgb(241, 8, 8);
+}
+
+.seat:nth-of-type(2) {
+    margin-right: 20px;
+}
+
+.seat:nth-last-of-type(2) {
+    margin-left: 20px;
+}
+
+.seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.25);
+}
+
+.showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+
+.showcase {
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #5885AF;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+
+.showcase li small {
+    margin-left: 3px;
+}
+
+.row {
+    display: flex;
+}
+
+.screen {
+    background-color: rgb(255, 253, 253);
+    height: 80px;
+    width: 100%;
+    margin: 15px 0;
+    transform: rotateX(-42deg);
+    box-shadow: 0 15px 9px rgba(255, 2555, 255, 0.7);
+}
+
+.container {
+    perspective: 1000px;
+    margin-bottom: 50px;
+}
+
+p.text {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+p.text span {
+    color: #ffffff;
+}
